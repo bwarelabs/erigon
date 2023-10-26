@@ -100,26 +100,30 @@ func (api *APIImpl) GetLogs(ctx context.Context, crit filters.FilterCriteria) (t
 		begin = *num
 		end = *num
 	} else {
-		// Convert the RPC block numbers into internal representations
-		latest, _, _, err := rpchelper.GetBlockNumber(rpc.BlockNumberOrHashWithNumber(rpc.LatestExecutedBlockNumber), tx, nil)
-		if err != nil {
-			return nil, err
-		}
-
-		begin = latest
 		if crit.FromBlock != nil {
 			if crit.FromBlock.Sign() >= 0 {
 				begin = crit.FromBlock.Uint64()
-			} else if !crit.FromBlock.IsInt64() || crit.FromBlock.Int64() != int64(rpc.LatestBlockNumber) {
-				return nil, fmt.Errorf("negative value for FromBlock: %v", crit.FromBlock)
+			} else {
+				// Convert the RPC block numbers into internal representations
+				var fromBlock = rpc.BlockNumber(crit.FromBlock.Int64())
+				blockNumber, _, _, err := rpchelper.GetBlockNumber(rpc.BlockNumberOrHashWithNumber(fromBlock), tx, api.filters)
+				if err != nil {
+					return nil, err
+				}
+				begin = blockNumber
 			}
 		}
-		end = latest
 		if crit.ToBlock != nil {
 			if crit.ToBlock.Sign() >= 0 {
 				end = crit.ToBlock.Uint64()
-			} else if !crit.ToBlock.IsInt64() || crit.ToBlock.Int64() != int64(rpc.LatestBlockNumber) {
-				return nil, fmt.Errorf("negative value for ToBlock: %v", crit.ToBlock)
+			} else {
+				// Convert the RPC block numbers into internal representations
+				var toBlock = rpc.BlockNumber(crit.ToBlock.Int64())
+				blockNumber, _, _, err := rpchelper.GetBlockNumber(rpc.BlockNumberOrHashWithNumber(toBlock), tx, api.filters)
+				if err != nil {
+					return nil, err
+				}
+				end = blockNumber
 			}
 		}
 	}
