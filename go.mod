@@ -27,24 +27,24 @@ require (
 	github.com/btcsuite/btcd/btcec/v2 v2.1.3
 	github.com/c2h5oh/datasize v0.0.0-20220606134207-859f65c6625b
 	github.com/cenkalti/backoff/v4 v4.2.1
-	github.com/consensys/gnark-crypto v0.12.1
+	github.com/consensys/gnark-crypto v0.18.1
 	github.com/crate-crypto/go-ipa v0.0.0-20221111143132-9aa5d42120bc
 	github.com/crate-crypto/go-kzg-4844 v0.7.0
 	github.com/davecgh/go-spew v1.1.1
 	github.com/deckarep/golang-set v1.8.0
 	github.com/deckarep/golang-set/v2 v2.3.1
-	github.com/docker/docker v1.6.2
+	github.com/docker/docker v29.3.1
 	github.com/dop251/goja v0.0.0-20220405120441-9037c2b61cbf
 	github.com/edsrzf/mmap-go v1.1.0
 	github.com/emicklei/dot v1.6.1
 	github.com/fjl/gencodec v0.0.0-20220412091415-8bb9e558978c
 	github.com/gballet/go-verkle v0.0.0-20221121182333-31427a1f2d35
 	github.com/gfx-labs/sse v0.0.0-20231226060816-f747e26a9baa
-	github.com/go-chi/chi/v5 v5.0.11
+	github.com/go-chi/chi/v5 v5.2.2
 	github.com/go-chi/cors v1.2.1
 	github.com/goccy/go-json v0.9.11
 	github.com/gofrs/flock v0.8.1
-	github.com/golang-jwt/jwt/v4 v4.5.0
+	github.com/golang-jwt/jwt/v4 v4.5.2
 	github.com/golang/snappy v0.0.5-0.20220116011046-fa5810519dcb
 	github.com/google/btree v1.1.2
 	github.com/google/cel-go v0.18.2
@@ -77,7 +77,7 @@ require (
 	github.com/prysmaticlabs/go-bitfield v0.0.0-20210809151128-385d8c5e3fb7
 	github.com/prysmaticlabs/gohashtree v0.0.3-alpha.0.20230502123415-aafd8b3ca202
 	github.com/quasilyte/go-ruleguard/dsl v0.3.22
-	github.com/rs/cors v1.10.1
+	github.com/rs/cors v1.11.0
 	github.com/spf13/afero v1.9.5
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/pflag v1.0.5
@@ -88,17 +88,17 @@ require (
 	github.com/ugorji/go/codec/codecgen v1.1.13
 	github.com/urfave/cli/v2 v2.27.1
 	github.com/valyala/fastjson v1.6.4
-	github.com/vektah/gqlparser/v2 v2.5.10
+	github.com/vektah/gqlparser/v2 v2.5.14
 	github.com/xsleonard/go-merkle v1.1.0
 	go.uber.org/mock v0.4.0
 	go.uber.org/zap v1.27.0
-	golang.org/x/crypto v0.22.0
+	golang.org/x/crypto v0.45.0
 	golang.org/x/exp v0.0.0-20231108232855-2478ac86f678
-	golang.org/x/net v0.24.0
+	golang.org/x/net v0.38.0
 	golang.org/x/sync v0.7.0
 	golang.org/x/sys v0.19.0
 	golang.org/x/time v0.5.0
-	google.golang.org/grpc v1.63.2
+	google.golang.org/grpc v1.79.3
 	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.3.0
 	google.golang.org/protobuf v1.33.0
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
@@ -247,8 +247,8 @@ require (
 	github.com/prometheus/procfs v0.12.0 // indirect
 	github.com/quic-go/qpack v0.4.0 // indirect
 	github.com/quic-go/qtls-go1-20 v0.3.3 // indirect
-	github.com/quic-go/quic-go v0.38.2 // indirect
-	github.com/quic-go/webtransport-go v0.5.3 // indirect
+	github.com/quic-go/quic-go v0.57.0 // indirect
+	github.com/quic-go/webtransport-go v0.10.0 // indirect
 	github.com/raulk/go-watchdog v1.3.0 // indirect
 	github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec // indirect
 	github.com/rogpeppe/go-internal v1.12.0 // indirect
@@ -258,7 +258,7 @@ require (
 	github.com/shoenig/go-m1cpu v0.1.6 // indirect
 	github.com/shopspring/decimal v1.2.0 // indirect
 	github.com/showwin/speedtest-go v1.6.10 // indirect
-	github.com/sirupsen/logrus v1.9.0 // indirect
+	github.com/sirupsen/logrus v1.9.1 // indirect
 	github.com/sosodev/duration v1.1.0 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/spf13/cast v1.3.1 // indirect
